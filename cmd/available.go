@@ -14,7 +14,7 @@ var availableCmd = &cobra.Command{
 	Short: "A brief description of your command",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		plugs := plugins.Commands{
-			{Name: "caddy", BuffaloCommand: "generate", Description: caddyGenCmd.Short},
+			{Name: caddyGenCmd.Use, BuffaloCommand: "generate", Description: caddyGenCmd.Short},
 			{Name: caddyDevCmd.Use, BuffaloCommand: "dev", Description: caddyDevCmd.Short},
 		}
 		return json.NewEncoder(os.Stdout).Encode(plugs)

@@ -40,7 +40,7 @@ localhost:443 {
 var caddyDevCmd = &cobra.Command{
 	Use:     "caddy",
 	Aliases: []string{"c"},
-	Short:   "Generates a Caddyfile for the local environement",
+	Short:   "Start caddy and buffalo dev",
 	Run: func(cmd *cobra.Command, args []string) {
 		c := makr.New()
 		b := makr.New()
